@@ -148,6 +148,7 @@ const pages = utils.getMultiEntry('./src/views/**/*.html')
 for (let page in pages) {
     // 配置生成的html文件，定义路径等
     let conf = {
+        
         filename: page + '/index.html',
         template: pages[page], //模板路径
         inject: true,
@@ -157,7 +158,17 @@ for (let page in pages) {
         // filter：将数据过滤，然后返回符合要求的数据，Object.keys是获取JSON对象中的每个key
         excludeChunks: Object.keys(pages).filter(item => {
             return (item != page)
-        })
+        }),
+        hash: true,
+        minify: {
+            removeComments: true,
+            collapseWhitespace: true,
+            removeAttributeQuotes: true
+            // more options:
+            // https://github.com/kangax/html-minifier#options-quick-reference
+        },
+        // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+        chunksSortMode: 'dependency'
 
     }
     console.log("**************page is:************* "+page);
