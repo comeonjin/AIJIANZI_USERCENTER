@@ -107,9 +107,12 @@ exports.getMultiEntry = function (globPath, rootpath) {
     const entries = {};
     console.log('globPath is:', globPath)
     glob.sync(globPath).forEach((entry) => {
+        //entry:  './src/views/courseList/main.js',也就是根据globPath得到的完全路径
+        //dirname: './src/views/courseList',也就是entry的目录路径
+        //relativePath: 'courseList', 也就是dirname（'./src/views'）在rootPath中的相对路径
         const dirname = path.dirname(entry);
-
         const relativePath = path.posix.relative(rootpath, dirname);
+        
         entries[relativePath] = entry;
     });
     console.log('all entrys is:', entries);
