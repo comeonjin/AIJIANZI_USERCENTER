@@ -2,6 +2,7 @@
     <div id="app">
         <!-- <img src="@/assets/logo.png"> -->
         this is page index
+        
     </div>
 </template>
 

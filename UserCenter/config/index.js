@@ -9,7 +9,7 @@ module.exports = {
 
         // Paths
         assetsSubDirectory: 'static',
-        assetsPublicPath: '/',
+        assetsPublicPath: '/', 
         proxyTable: {},
 
         // Various Dev Server settings
@@ -50,7 +50,7 @@ module.exports = {
         // Paths
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
-        assetsPublicPath: '/',
+        assetsPublicPath: '../',  //作为静态文件的存放目录，使用时连接 assetsRoot 作为最终访问目录
 
         /**
          * Source Maps
