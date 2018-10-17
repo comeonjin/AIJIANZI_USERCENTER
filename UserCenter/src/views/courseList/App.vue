@@ -3,20 +3,24 @@
         <!-- <img src="@/assets/logo.png"> -->
         this is page couser_list
         <Process />
+        <Course />
 
     </div>
 </template>
 
 <script>
 import Process from './components/Process';
+import Course from './components/Course';
 
 export default {
     name: 'App',
     components: {
         Process,
+        Course,
     },
 };
 </script>
+
 
 <style>
 #app {
