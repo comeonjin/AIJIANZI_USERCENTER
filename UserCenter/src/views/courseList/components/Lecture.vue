@@ -1,6 +1,6 @@
 <template>
     <div class="lectureContainer">
-        <div class="lectureLeft block" :class="{isOver: courseStatus === 3}">
+        <div class="lectureLeft block" :class="{isOver: courseStatus===3, onlinePlay: courseStatus === 2}">
             <div class="lectureNumber" >
                 <span class="number">
                     2
@@ -10,7 +10,7 @@
                 </span>
             </div>
             <div class="lectureStatus">
-                未开始
+                {{courseStatus === 3 ? '已结束' : '未开始'}}
             </div>
         </div>
         <div class="lectureRight block">
