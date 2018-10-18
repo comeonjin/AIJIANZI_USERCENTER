@@ -14,7 +14,7 @@
         </div>
         <div class="segmentLine"></div>
         <Lecture />
-        <Lecture />
+        <!-- <Lecture /> -->
     </div>
 
 </template>
@@ -80,6 +80,7 @@ export default {
         .segmentLine{
             width: 100%;
             height: 1px;
+            margin-bottom: 20px;
             background: #eee;
         }
         .frame{

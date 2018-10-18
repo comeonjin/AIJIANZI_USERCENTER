@@ -80,7 +80,9 @@ exports.styleLoaders = function (options) {
         })
     }
 
+    // console.log('************** output is ********** ', output)
     return output
+
 }
 
 exports.createNotifierCallback = () => {
